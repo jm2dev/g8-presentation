@@ -1,0 +1,9 @@
+#+TITLE: Giter8 presentation
+#+AUTHOR: José Miguel
+
+* Abstract
+
+LaTeX2e beamer presetation about giter8 tool.
+
+* TODO basic presentation 
+
