@@ -2,7 +2,7 @@
 
 \usepackage{listings}
 
-\title{giter8}
+\title{Scala development up and running with giter8}
 \author{José Miguel Martínez Carrasco}
 \institute[Springer]{Springer}
 \date{\today}
@@ -65,26 +65,25 @@
 \subsection{g8}
 \frame{
   \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
-  	  Giter8 is a command line tool to generate files and directories from templates published on github. It's implemented in Scala and runs through the Simple Build Tool launcher, but it can produce output for any purpose.
+  	  Giter8 is a command line tool to generate files and directories from templates published on github. It's implemented in Scala and runs through the Simple Build Tool launcher, but it can produce output for any purpose. \cite{g8}
   \end{beamercolorbox}
-  
-  \cite{g8}
 }
 
 \section{Installation}
 \frame{\tableofcontents[currentsection]}
 
-\subsection{Conscript}
 \frame{
   \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
-  This is a tool for installing and updating Scala software programs.
+  Everything under \$HOME/bin!!!
   \end{beamercolorbox}
-  
-  \cite{cs}
 }
 
-%\subsection{cs installation}
+\subsection{Conscript}
 \begin{frame}[fragile]
+  \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
+  This is a tool for installing and updating Scala software programs. \cite{cs}
+  \end{beamercolorbox}
+
   \begin{lstlisting}[language=bash]
     curl https://raw.github.com/n8han/conscript/master/ \\
       setup.sh | sh
@@ -93,10 +92,23 @@
   \end{lstlisting}
 \end{frame}
 
+\subsection{sbt launcher}
+\begin{frame}[fragile]
+  \begin{lstlisting}[language=bash]
+    #!/bin/sh    
+    java -Xmx1024M -jar `dirname $0`/sbt-latest/sbt-launch.jar "$@" 
+  \end{lstlisting}
+\end{frame}
+
+\section{References}
+\frame{\tableofcontents[currentsection]}
+
+\frame{
 \begin{thebibliography}{10}
   \bibitem {g8}{https://github.com/n8han/giter8}
   \bibitem{cs}{https://github.com/n8han/conscript}
 \end{thebibliography}
+}
 
 \section*{Outline}
 \frame{\tableofcontents}
