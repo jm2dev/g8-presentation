@@ -6,5 +6,5 @@
 LaTeX2e beamer presetation about giter8 tool.
 
 * DONE basic presentation 
-* TODO usage
-* TODO templates
+* DONE usage
+* DONE templates

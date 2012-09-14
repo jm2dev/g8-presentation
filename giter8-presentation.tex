@@ -62,14 +62,15 @@
 \section{Introduction}
 \frame{\tableofcontents[currentsection]}
 
-\subsection{g8}
+\subsection{Motivation}
 \frame{
-  \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
-  	  Giter8 is a command line tool to generate files and directories from templates published on github. It's implemented in Scala and runs through the Simple Build Tool launcher, but it can produce output for any purpose. \cite{g8}
-  \end{beamercolorbox}
+  \begin{description}
+    \item[context] New technology, new tools, too many options.
+    \item[target] Simple and working solution. 
+  \end{description}
 }
 
-\section{Installation}
+\section{Setup}
 \frame{\tableofcontents[currentsection]}
 
 \frame{
@@ -78,10 +79,34 @@
   \end{beamercolorbox}
 }
 
-\subsection{Conscript}
+\subsection{requisites}
+\frame{
+  \begin{itemize}
+    \item git
+    \item github account
+    \item unix
+  \end{itemize}
+}
+
+\subsection{sbt}
+\begin{frame}[fragile]
+  \begin{lstlisting}[language=bash]
+    #!/bin/sh    
+    java -Xmx1024M -jar `dirname $0`/sbt-latest/sbt-launch.jar "$@" 
+  \end{lstlisting} \cite{sbt}
+\end{frame}
+
+\subsection{giter8}
+\frame{
+  \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
+  	\textit{Giter8} is a command line tool to generate files and directories from templates published on github. It's implemented in Scala and runs through the Simple Build Tool launcher, but it can produce output for any purpose. \cite{g8}
+  \end{beamercolorbox}
+}
+
+\subsection{conscript}
 \begin{frame}[fragile]
   \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
-  This is a tool for installing and updating Scala software programs. \cite{cs}
+    \textit{Conscript} is a tool for installing and updating Scala software programs. \cite{cs}
   \end{beamercolorbox}
 
   \begin{lstlisting}[language=bash]
@@ -92,21 +117,36 @@
   \end{lstlisting}
 \end{frame}
 
-\subsection{sbt launcher}
+\section{Usage}
+\frame{\tableofcontents[currentsection]}
+
+\subsection{templates}
 \begin{frame}[fragile]
+  \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
+  Any github repository with g8 suffix.
+  \end{beamercolorbox}
+
   \begin{lstlisting}[language=bash]
-    #!/bin/sh    
-    java -Xmx1024M -jar `dirname $0`/sbt-latest/sbt-launch.jar "$@" 
+    g8 softprops/unfiltered
   \end{lstlisting}
 \end{frame}
+
+\subsection{publish}
+\frame{
+  \begin{beamercolorbox}[shadow=true, rounded=true]{postit}
+  Publish your template as \textit{yourtemplate.g8} to github and update giter8 wiki \cite{g8templates}.
+  \end{beamercolorbox}
+}  
 
 \section{References}
 \frame{\tableofcontents[currentsection]}
 
 \frame{
 \begin{thebibliography}{10}
-  \bibitem {g8}{https://github.com/n8han/giter8}
+  \bibitem{sbt}{http://www.scala-sbt.org}
+  \bibitem{g8}{https://github.com/n8han/giter8}
   \bibitem{cs}{https://github.com/n8han/conscript}
+  \bibitem{g8templates}{https://github.com/n8han/giter8/wiki/giter8-templates}
 \end{thebibliography}
 }
 
